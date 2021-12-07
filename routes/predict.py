@@ -2,20 +2,21 @@ import numpy as np
 import tensorflow as tf
 import sys,json
 import joblib
+import json
 
 RFC_model = joblib.load('models/random_forest.joblib')
 
-data = json.loads(sys.argv[1])  
-print(data)
+data = json.loads(sys.argv[1])
+data = np.array(list(data),dtype=float)
+# print("Data : ",type(data))
 
-# result = RFC_model.predict(data)
-# result = np.argmax(result,axis = 1)
-# print(result)
+data = data.reshape(1,-1)
 
-import json
-print("\n The detected malware is: ")
-print(json.dumps(data))
+# print("Data after reshaping is ",data)
 
-# Malware_model.input
+result = RFC_model.predict(data)
+
+
+print(json.dumps(result.item()))
 
 sys.stdout.flush()

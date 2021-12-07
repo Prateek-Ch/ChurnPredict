@@ -23,18 +23,14 @@ app.use('/predict', predictRouter);
 app.get('/result', (req,res) =>{
   
     //Initialize data
-    const data = {
-        array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-      }
-
-    //Stringify data
-    let stringifiedData = JSON.stringify(data);
-
+  var data = [2349,18,1,0,0,0,0,0,1,1232,2,474,59,2107.05,2821.34,3213.44,4447.45,0.11,7.44,714.4,1094.09,2402.62,3260.58]
+  data = JSON.stringify(data);
   var spawn = require('child_process').spawn;
-  var process = spawn('C:Users/prateek/anaconda3/envs/py37/python', ['E:/VIT/Sem 7/Tarp/Project/routes/predict.py', stringifiedData]);
+  var process = spawn('C:Users/prateek/anaconda3/envs/py37/python', ['E:/VIT/Sem 7/Tarp/Project/routes/predict.py', data]);
 
+   var predictedData;
   process.stdout.on('data', function (data) {
-      global.predictedData = data.toString();
+      predictedData = data.toString();
   });
 
   process.stdout.on('end', function (data) {
