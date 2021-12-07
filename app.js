@@ -18,7 +18,9 @@ app.get('/', (req, res) => {
 });
 
 const predictRouter = require('./routes/predict');
-app.use('/predict', predictRouter);
+app.get('/Predict', (req,res) =>{
+  res.render("predict");
+});
 
 app.get('/result', (req,res) =>{
   
