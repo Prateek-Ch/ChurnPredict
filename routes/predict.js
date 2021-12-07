@@ -8,7 +8,29 @@ router.get('/', function(req, res) {
 
 router.post('/',function(req,res){
    console.log(req.body)
+   var a = req.body.vintage	
+   var b = req.body.age	
+   var c = req.body.gender	
+   var d = req.body.dependents	
+   var e = req.body.occupation	
+   var f = req.body.city	
+   var g = req.body.customer_nw_category	
+   var h = req.body.branch_code	
+   var i = req.body.days_since_last_transaction	
+   var j = req.body.current_balance	
+   var k = req.body.previous_month_end_balance	
+   var l = req.body.average_monthly_balance_prevQ	
+   var m = req.body.average_monthly_balance_prevQ2	
+   var n = req.body.current_month_credit	
+   var o = req.body.previous_month_credit	
+   var p = req.body.current_month_debit	
+   var q = req.body.previous_month_debit	
+   var r = req.body.current_month_balance	
+   var s = req.body.previous_month_balance
    
+   var arr = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s]
+   console.log(arr)
+
    var data = [2349,18,1,0,0,0,0,0,1,1232,2,474,59,2107.05,2821.34,3213.44,4447.45,0.11,7.44,714.4,1094.09,2402.62,3260.58]
    data = JSON.stringify(data);
    var spawn = require('child_process').spawn;
