@@ -1,82 +1,82 @@
 <%- include('partials/header'); -%>
 
 <div class="form align-items-center">
-    <form method="POST" action="/result">
+    <form method="POST" action="predict">
         <div class="form-group">
           <label for="vintage">Vintage</label>
-          <input type="text" class="form-control" id="vintage" aria-describedby="emailHelp" placeholder="Vintage">
+          <input type="text" class="form-control" name="vintage" placeholder="Vintage">
         </div>
         <div class="form-group">
           <label for="age">Age</label>
-          <input type="text" class="form-control" id="age" placeholder="Age">
+          <input type="text" class="form-control" name="age" placeholder="Age">
         </div>
         <div class="form-group">
             <label for="gender">Gender</label>
-            <input type="text" class="form-control" id="gender" placeholder="Gender">
+            <input type="text" class="form-control" name="gender" placeholder="Gender">
         </div>
         <div class="form-group">
             <label for="dependents">Dependents</label>
-            <input type="text" class="form-control" id="dependents" placeholder="Dependents">
+            <input type="text" class="form-control" name="dependents" placeholder="Dependents">
         </div>
         <div class="form-group">
             <label for="occupation">Occupation</label>
-            <input type="text" class="form-control" id="occupation" placeholder="Occupation">
+            <input type="text" class="form-control" name="occupation" placeholder="Occupation">
         </div>
         <div class="form-group">
             <label for="city">City</label>
-            <input type="text" class="form-control" id="city" placeholder="City">
+            <input type="text" class="form-control" name="city" placeholder="City">
         </div>
         <div class="form-group">
             <label for="customer_nw_category">Customer_nw_category</label>
-            <input type="text" class="form-control" id="customer_nw_category" placeholder="customer_nw_category">
+            <input type="text" class="form-control" name="customer_nw_category" placeholder="customer_nw_category">
         </div>
         <div class="form-group">
             <label for="branch_code">Branch Code</label>
-            <input type="text" class="form-control" id="branch_code" placeholder="branch_code">
+            <input type="text" class="form-control" name="branch_code" placeholder="branch_code">
         </div>
         <div class="form-group">
             <label for="last_transaction">Days Since Last Transaction</label>
-            <input type="text" class="form-control" id="last_transaction" placeholder="Last transaction">
+            <input type="text" class="form-control" name="last_transaction" placeholder="Last transaction">
         </div>
         <div class="form-group">
             <label for="current_balance">Current Balance</label>
-            <input type="text" class="form-control" id="current_balance" placeholder="Current Balance">
+            <input type="text" class="form-control" name="current_balance" placeholder="Current Balance">
         </div>
         <div class="form-group">
             <label for="previous_month_end_balance">Previous Month Balance</label>
-            <input type="text" class="form-control" id="previous_month_end_balance" placeholder="Prev Month Balance">
+            <input type="text" class="form-control" name="previous_month_end_balance" placeholder="Prev Month Balance">
         </div>
         <div class="form-group">
             <label for="average_monthly_balance_prevQ">Average Monthly Balance PrevQ</label>
-            <input type="text" class="form-control" id="average_monthly_balance_prevQ" placeholder="Average Monthly Balance PrevQ">
+            <input type="text" class="form-control" name="average_monthly_balance_prevQ" placeholder="Average Monthly Balance PrevQ">
         </div>
         <div class="form-group">
             <label for="average_monthly_balance_prevQ2">Average Monthly Balance PrevQ2</label>
-            <input type="text" class="form-control" id="average_monthly_balance_prevQ2" placeholder="Average Monthly Balance PrevQ2">
+            <input type="text" class="form-control" name="average_monthly_balance_prevQ2" placeholder="Average Monthly Balance PrevQ2">
         </div>
         <div class="form-group">
             <label for="current_month_credit">Current Month Credit</label>
-            <input type="text" class="form-control" id="current_month_credit" placeholder="Current Month Credit">
+            <input type="text" class="form-control" name="current_month_credit" placeholder="Current Month Credit">
         </div>
         <div class="form-group">
             <label for="previous_month_credit">Previous Month Credit</label>
-            <input type="text" class="form-control" id="previous_month_credit" placeholder="Previous Month Credit">
+            <input type="text" class="form-control" name="previous_month_credit" placeholder="Previous Month Credit">
         </div>
         <div class="form-group">
             <label for="current_month_debit">Current Month Debit</label>
-            <input type="text" class="form-control" id="current_month_debit" placeholder="Current Month Debit">
+            <input type="text" class="form-control" name="current_month_debit" placeholder="Current Month Debit">
         </div>
         <div class="form-group">
             <label for="previous_month_debit">Previous Month Debit</label>
-            <input type="text" class="form-control" id="previous_month_debit" placeholder="Previous Month Debit">
+            <input type="text" class="form-control" name="previous_month_debit" placeholder="Previous Month Debit">
         </div>
         <div class="form-group">
             <label for="current_month_balance">Current Month Balance</label>
-            <input type="text" class="form-control" id="current_month_balance" placeholder="Current Month Balance">
+            <input type="text" class="form-control" name="current_month_balance" placeholder="Current Month Balance">
         </div>
         <div class="form-group">
             <label for="previous_month_balance">Previous Month Balance</label>
-            <input type="text" class="form-control" id="previous_month_balance" placeholder="Previous Month Balance">
+            <input type="text" class="form-control" name="previous_month_balance" placeholder="Previous Month Balance">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
