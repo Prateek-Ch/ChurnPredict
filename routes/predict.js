@@ -55,7 +55,7 @@ router.post('/',function(req,res){
       e4 = 1;
       e1=0;e3=0;e2 = 0;
    }
-   var arr = [a,b,c,d,0,e1,e2,e3,e4,f,g,h,i,j,k,l,m,n,o,p,q,r,s]
+   var arr = [c,f,h,i,0,e1,e2,e3,e4,g,j,k,m,l,n,o,p,q,r,s,a,b,d]
    console.log(arr)
 
    var data = [2349,18,1,0,0,0,0,0,1,1232,2,474,59,2107.05,2821.34,3213.44,4447.45,0.11,7.44,714.4,1094.09,2402.62,3260.58]
