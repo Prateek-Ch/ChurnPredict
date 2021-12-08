@@ -43,6 +43,19 @@
     margin-left: 350px;
   }
 
+  .about {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    position: fixed;
+    width: 700px;
+    height: 300px;
+    top: 50%;
+    left: 40%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
+  }
+
   .note {
     background: #fff;
     border-radius: 7px;
