@@ -11,14 +11,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.render("index");
-});
+
 
 var predictRouter = require('./routes/predict');
+var aboutRouter = require('./routes/about');
+var indexRouter = require('./routes/index');
 
 
-app.use('/Predict',predictRouter);
+app.use('/predict',predictRouter);
+app.use('/about',aboutRouter);
+app.use('/',indexRouter);
+
 
 
 PORT = process.env.PORT || 3000;

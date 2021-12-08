@@ -1,8 +1,16 @@
-<h1>
+<%- include('partials/header'); -%>
+
+
+<div class="note">
+
+<h3 style="position: absolute;top: 25%;left: 25%;">
     Predicted output is
-</h1>
+</h3>
 <% if(predictedData == 0) { %>
-    <h3>The customer will not churn</h3>
+    <h4 style="position: absolute;top: 50%;left: 20%;">The customer will not churn</h4>
 <% } else{ %>
-    <h3>The customer might churn</h3>
+    <h4 style="position: absolute;top: 50%;left: 20%;">The customer might churn</h4>
 <% } %>
+
+
+</div>

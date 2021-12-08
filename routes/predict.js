@@ -8,28 +8,25 @@ router.get('/', function(req, res) {
 
 router.post('/',function(req,res){
    console.log(req.body)
-   var a = req.body.vintage	
-   var b = req.body.age	
+   var a = parseInt(req.body.vintage)	
+   var b = parseInt(req.body.age)	
    var c = req.body.Gender	
-   var d = req.body.dependents	
+   var d = parseInt(req.body.dependents)	
    var e = req.body.occupation	
-   var f = req.body.city	
-   var g = req.body.customer_nw_category	
-   var h = req.body.branch_code	
-   var i = req.body.days_since_last_transaction	
-   var j = req.body.current_balance	
-   var k = req.body.previous_month_end_balance	
-   var l = req.body.average_monthly_balance_prevQ	
-   var m = req.body.average_monthly_balance_prevQ2	
-   var n = req.body.current_month_credit	
-   var o = req.body.previous_month_credit	
-   var p = req.body.current_month_debit	
-   var q = req.body.previous_month_debit	
-   var r = req.body.current_month_balance	
-   var s = req.body.previous_month_balance
-
-   console.log(c);
-   console.log(req.body.occupation)
+   var f = parseInt(req.body.city)	
+   var g = parseInt(req.body.customer_nw_category)	
+   var h = parseInt(req.body.branch_code)	
+   var i = parseInt(req.body.last_transaction)	
+   var j = parseFloat(req.body.current_balance)	
+   var k = parseFloat(req.body.previous_month_end_balance)	
+   var l = parseFloat(req.body.average_monthly_balance_prevQ)	
+   var m = parseFloat(req.body.average_monthly_balance_prevQ2)	
+   var n = parseFloat(req.body.current_month_credit)
+   var o = parseFloat(req.body.previous_month_credit)	
+   var p = parseFloat(req.body.current_month_debit)
+   var q = parseFloat(req.body.previous_month_debit)	
+   var r = parseFloat(req.body.current_month_balance)	
+   var s = parseFloat(req.body.previous_month_balance)
 
    if(c.localeCompare("Male")==0){
       c = 1
@@ -56,12 +53,13 @@ router.post('/',function(req,res){
       e1=0;e3=0;e2 = 0;
    }
    var arr = [c,f,h,i,0,e1,e2,e3,e4,g,j,k,m,l,n,o,p,q,r,s,a,b,d]
-   console.log(arr)
+   console.log("arr",arr)
 
-   var data = [2349,18,1,0,0,0,0,0,1,1232,2,474,59,2107.05,2821.34,3213.44,4447.45,0.11,7.44,714.4,1094.09,2402.62,3260.58]
-   data = JSON.stringify(data);
+   // var data = [2349,18,1,0,0,0,0,0,1,1232,2,474,59,2107.05,2821.34,3213.44,4447.45,0.11,7.44,714.4,1094.09,2402.62,3260.58]
+   // console.log("data",data)
+   arr = JSON.stringify(arr);
    var spawn = require('child_process').spawn;
-   var process = spawn('C:Users/prateek/anaconda3/envs/py37/python', ['E:/VIT/Sem 7/Tarp/Project/routes/predict.py', data]);
+   var process = spawn('C:Users/prateek/anaconda3/envs/py37/python', ['E:/VIT/Sem 7/Tarp/Project/routes/predict.py', arr]);
 
    var predictedData;
    process.stdout.on('data', function (data) {
