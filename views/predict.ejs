@@ -10,18 +10,57 @@
           <label for="age">Age</label>
           <input type="text" class="form-control" name="age" placeholder="Age">
         </div>
-        <div class="form-group">
-            <label for="gender">Gender</label>
-            <input type="text" class="form-control" name="gender" placeholder="Gender">
-        </div>
+        <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Gender" value="Male">
+                  <label class="form-check-label" for="Male">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Gender" value="Female">
+                  <label class="form-check-label" for="Female">
+                    Female
+                  </label>
+                </div>
+        </fieldset>
         <div class="form-group">
             <label for="dependents">Dependents</label>
             <input type="text" class="form-control" name="dependents" placeholder="Dependents">
         </div>
-        <div class="form-group">
-            <label for="occupation">Occupation</label>
-            <input type="text" class="form-control" name="occupation" placeholder="Occupation">
-        </div>
+        <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Occupation</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="occupation" value="retired">
+                  <label class="form-check-label" for="retired">
+                    Retired
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="occupation" value="salaried">
+                  <label class="form-check-label" for="salaried">
+                    Salaried
+                  </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="occupation" value="self-employed">
+                    <label class="form-check-label" for="self-employed">
+                        Self Employed
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="occupation" value="student">
+                    <label class="form-check-label" for="student">
+                        Student
+                    </label>
+                </div>
+
+        </fieldset>
         <div class="form-group">
             <label for="city">City</label>
             <input type="text" class="form-control" name="city" placeholder="City">
