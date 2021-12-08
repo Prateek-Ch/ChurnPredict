@@ -36,10 +36,12 @@ for i in num_cols:
 # print(json.dumps(df.values.tolist()))
 
 
-# scaled = scaler.transform(df[all_cols])
+scaled = scaler.transform(df[all_cols])
 # print(json.dumps(scaled.tolist()))
 
-result = RFC_model.predict(df)
+
+
+result = RFC_model.predict(scaled)
 
 print(json.dumps(result.item()))
 
